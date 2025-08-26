@@ -22271,14 +22271,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                soup_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsoup-2.4" 2>&1`
+	        soup_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsoup-2.4" 2>&1`
         else
-                soup_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsoup-2.4" 2>&1`
+	        soup_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsoup-2.4" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$soup_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$soup_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (libsoup-2.4) were not met:
+	as_fn_error $? "Package requirements (libsoup-2.4) were not met:
 
 $soup_PKG_ERRORS
 
@@ -22291,7 +22291,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -22304,8 +22304,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        soup_CFLAGS=$pkg_cv_soup_CFLAGS
-        soup_LIBS=$pkg_cv_soup_LIBS
+	soup_CFLAGS=$pkg_cv_soup_CFLAGS
+	soup_LIBS=$pkg_cv_soup_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -22367,14 +22367,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                xml_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libxml-2.0" 2>&1`
+	        xml_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libxml-2.0" 2>&1`
         else
-                xml_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libxml-2.0" 2>&1`
+	        xml_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libxml-2.0" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$xml_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$xml_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (libxml-2.0) were not met:
+	as_fn_error $? "Package requirements (libxml-2.0) were not met:
 
 $xml_PKG_ERRORS
 
@@ -22387,7 +22387,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -22400,8 +22400,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        xml_CFLAGS=$pkg_cv_xml_CFLAGS
-        xml_LIBS=$pkg_cv_xml_LIBS
+	xml_CFLAGS=$pkg_cv_xml_CFLAGS
+	xml_LIBS=$pkg_cv_xml_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -22472,12 +22472,12 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                systemd_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsystemd >= 209" 2>&1`
+	        systemd_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsystemd >= 209" 2>&1`
         else
-                systemd_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsystemd >= 209" 2>&1`
+	        systemd_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsystemd >= 209" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$systemd_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$systemd_PKG_ERRORS" >&5
 
 
 pkg_failed=no
@@ -22531,14 +22531,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                systemd_daemon_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsystemd-daemon" 2>&1`
+	        systemd_daemon_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsystemd-daemon" 2>&1`
         else
-                systemd_daemon_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsystemd-daemon" 2>&1`
+	        systemd_daemon_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsystemd-daemon" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$systemd_daemon_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$systemd_daemon_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (libsystemd-daemon) were not met:
+	as_fn_error $? "Package requirements (libsystemd-daemon) were not met:
 
 $systemd_daemon_PKG_ERRORS
 
@@ -22551,7 +22551,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -22564,8 +22564,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        systemd_daemon_CFLAGS=$pkg_cv_systemd_daemon_CFLAGS
-        systemd_daemon_LIBS=$pkg_cv_systemd_daemon_LIBS
+	systemd_daemon_CFLAGS=$pkg_cv_systemd_daemon_CFLAGS
+	systemd_daemon_LIBS=$pkg_cv_systemd_daemon_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -22624,14 +22624,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                systemd_journal_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsystemd-journal" 2>&1`
+	        systemd_journal_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsystemd-journal" 2>&1`
         else
-                systemd_journal_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsystemd-journal" 2>&1`
+	        systemd_journal_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsystemd-journal" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$systemd_journal_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$systemd_journal_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (libsystemd-journal) were not met:
+	as_fn_error $? "Package requirements (libsystemd-journal) were not met:
 
 $systemd_journal_PKG_ERRORS
 
@@ -22644,7 +22644,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -22657,8 +22657,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        systemd_journal_CFLAGS=$pkg_cv_systemd_journal_CFLAGS
-        systemd_journal_LIBS=$pkg_cv_systemd_journal_LIBS
+	systemd_journal_CFLAGS=$pkg_cv_systemd_journal_CFLAGS
+	systemd_journal_LIBS=$pkg_cv_systemd_journal_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -22721,14 +22721,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                systemd_daemon_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsystemd-daemon" 2>&1`
+	        systemd_daemon_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsystemd-daemon" 2>&1`
         else
-                systemd_daemon_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsystemd-daemon" 2>&1`
+	        systemd_daemon_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsystemd-daemon" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$systemd_daemon_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$systemd_daemon_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (libsystemd-daemon) were not met:
+	as_fn_error $? "Package requirements (libsystemd-daemon) were not met:
 
 $systemd_daemon_PKG_ERRORS
 
@@ -22741,7 +22741,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -22754,8 +22754,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        systemd_daemon_CFLAGS=$pkg_cv_systemd_daemon_CFLAGS
-        systemd_daemon_LIBS=$pkg_cv_systemd_daemon_LIBS
+	systemd_daemon_CFLAGS=$pkg_cv_systemd_daemon_CFLAGS
+	systemd_daemon_LIBS=$pkg_cv_systemd_daemon_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -22814,14 +22814,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                systemd_journal_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsystemd-journal" 2>&1`
+	        systemd_journal_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libsystemd-journal" 2>&1`
         else
-                systemd_journal_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsystemd-journal" 2>&1`
+	        systemd_journal_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libsystemd-journal" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$systemd_journal_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$systemd_journal_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (libsystemd-journal) were not met:
+	as_fn_error $? "Package requirements (libsystemd-journal) were not met:
 
 $systemd_journal_PKG_ERRORS
 
@@ -22834,7 +22834,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -22847,8 +22847,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        systemd_journal_CFLAGS=$pkg_cv_systemd_journal_CFLAGS
-        systemd_journal_LIBS=$pkg_cv_systemd_journal_LIBS
+	systemd_journal_CFLAGS=$pkg_cv_systemd_journal_CFLAGS
+	systemd_journal_LIBS=$pkg_cv_systemd_journal_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -22857,8 +22857,8 @@ fi
 
 
 else
-        systemd_CFLAGS=$pkg_cv_systemd_CFLAGS
-        systemd_LIBS=$pkg_cv_systemd_LIBS
+	systemd_CFLAGS=$pkg_cv_systemd_CFLAGS
+	systemd_LIBS=$pkg_cv_systemd_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -22985,24 +22985,24 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                tss2_sys_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "tss2-sys" 2>&1`
+	        tss2_sys_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "tss2-sys" 2>&1`
         else
-                tss2_sys_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "tss2-sys" 2>&1`
+	        tss2_sys_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "tss2-sys" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$tss2_sys_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$tss2_sys_PKG_ERRORS" >&5
 
-        tss2_sys=false
+	tss2_sys=false
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        tss2_sys=false
+	tss2_sys=false
 else
-        tss2_sys_CFLAGS=$pkg_cv_tss2_sys_CFLAGS
-        tss2_sys_LIBS=$pkg_cv_tss2_sys_LIBS
+	tss2_sys_CFLAGS=$pkg_cv_tss2_sys_CFLAGS
+	tss2_sys_LIBS=$pkg_cv_tss2_sys_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
-        tss2_sys=true;
+	tss2_sys=true;
 printf "%s\n" "#define TSS2_SYS /**/" >>confdefs.h
 
 fi
@@ -23058,24 +23058,24 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                tss2_esys_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "tss2-esys" 2>&1`
+	        tss2_esys_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "tss2-esys" 2>&1`
         else
-                tss2_esys_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "tss2-esys" 2>&1`
+	        tss2_esys_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "tss2-esys" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$tss2_esys_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$tss2_esys_PKG_ERRORS" >&5
 
-        tss2_esys=false
+	tss2_esys=false
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        tss2_esys=false
+	tss2_esys=false
 else
-        tss2_esys_CFLAGS=$pkg_cv_tss2_esys_CFLAGS
-        tss2_esys_LIBS=$pkg_cv_tss2_esys_LIBS
+	tss2_esys_CFLAGS=$pkg_cv_tss2_esys_CFLAGS
+	tss2_esys_LIBS=$pkg_cv_tss2_esys_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
-        tss2_esys=true;
+	tss2_esys=true;
 printf "%s\n" "#define TSS2_ESYS /**/" >>confdefs.h
 
 fi
@@ -23140,24 +23140,24 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                tss2_tabrmd_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "tcti-tabrmd" 2>&1`
+	        tss2_tabrmd_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "tcti-tabrmd" 2>&1`
         else
-                tss2_tabrmd_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "tcti-tabrmd" 2>&1`
+	        tss2_tabrmd_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "tcti-tabrmd" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$tss2_tabrmd_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$tss2_tabrmd_PKG_ERRORS" >&5
 
-        tss2_tabrmd=false
+	tss2_tabrmd=false
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        tss2_tabrmd=false
+	tss2_tabrmd=false
 else
-        tss2_tabrmd_CFLAGS=$pkg_cv_tss2_tabrmd_CFLAGS
-        tss2_tabrmd_LIBS=$pkg_cv_tss2_tabrmd_LIBS
+	tss2_tabrmd_CFLAGS=$pkg_cv_tss2_tabrmd_CFLAGS
+	tss2_tabrmd_LIBS=$pkg_cv_tss2_tabrmd_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
-        tss2_tabrmd=true;
+	tss2_tabrmd=true;
 printf "%s\n" "#define TSS2_TCTI_TABRMD /**/" >>confdefs.h
 
 fi
@@ -23213,24 +23213,24 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                tss2_socket_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "tcti-socket" 2>&1`
+	        tss2_socket_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "tcti-socket" 2>&1`
         else
-                tss2_socket_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "tcti-socket" 2>&1`
+	        tss2_socket_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "tcti-socket" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$tss2_socket_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$tss2_socket_PKG_ERRORS" >&5
 
-        tss2_socket=false
+	tss2_socket=false
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        tss2_socket=false
+	tss2_socket=false
 else
-        tss2_socket_CFLAGS=$pkg_cv_tss2_socket_CFLAGS
-        tss2_socket_LIBS=$pkg_cv_tss2_socket_LIBS
+	tss2_socket_CFLAGS=$pkg_cv_tss2_socket_CFLAGS
+	tss2_socket_LIBS=$pkg_cv_tss2_socket_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
-        tss2_socket=true;
+	tss2_socket=true;
 printf "%s\n" "#define TSS2_TCTI_SOCKET /**/" >>confdefs.h
 
 fi
@@ -23304,12 +23304,12 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                json_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "json-c" 2>&1`
+	        json_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "json-c" 2>&1`
         else
-                json_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "json-c" 2>&1`
+	        json_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "json-c" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$json_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$json_PKG_ERRORS" >&5
 
 
 pkg_failed=no
@@ -23363,14 +23363,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                json_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "json" 2>&1`
+	        json_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "json" 2>&1`
         else
-                json_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "json" 2>&1`
+	        json_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "json" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$json_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$json_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (json) were not met:
+	as_fn_error $? "Package requirements (json) were not met:
 
 $json_PKG_ERRORS
 
@@ -23383,7 +23383,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -23396,8 +23396,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        json_CFLAGS=$pkg_cv_json_CFLAGS
-        json_LIBS=$pkg_cv_json_LIBS
+	json_CFLAGS=$pkg_cv_json_CFLAGS
+	json_LIBS=$pkg_cv_json_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -23457,14 +23457,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                json_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "json" 2>&1`
+	        json_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "json" 2>&1`
         else
-                json_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "json" 2>&1`
+	        json_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "json" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$json_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$json_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (json) were not met:
+	as_fn_error $? "Package requirements (json) were not met:
 
 $json_PKG_ERRORS
 
@@ -23477,7 +23477,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -23490,15 +23490,15 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        json_CFLAGS=$pkg_cv_json_CFLAGS
-        json_LIBS=$pkg_cv_json_LIBS
+	json_CFLAGS=$pkg_cv_json_CFLAGS
+	json_LIBS=$pkg_cv_json_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
 fi
 else
-        json_CFLAGS=$pkg_cv_json_CFLAGS
-        json_LIBS=$pkg_cv_json_LIBS
+	json_CFLAGS=$pkg_cv_json_CFLAGS
+	json_LIBS=$pkg_cv_json_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -24032,14 +24032,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                wolfssl_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "wolfssl" 2>&1`
+	        wolfssl_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "wolfssl" 2>&1`
         else
-                wolfssl_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "wolfssl" 2>&1`
+	        wolfssl_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "wolfssl" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$wolfssl_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$wolfssl_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (wolfssl) were not met:
+	as_fn_error $? "Package requirements (wolfssl) were not met:
 
 $wolfssl_PKG_ERRORS
 
@@ -24052,7 +24052,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -24065,8 +24065,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        wolfssl_CFLAGS=$pkg_cv_wolfssl_CFLAGS
-        wolfssl_LIBS=$pkg_cv_wolfssl_LIBS
+	wolfssl_CFLAGS=$pkg_cv_wolfssl_CFLAGS
+	wolfssl_LIBS=$pkg_cv_wolfssl_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -24207,12 +24207,12 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                botan_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "botan-3" 2>&1`
+	        botan_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "botan-3" 2>&1`
         else
-                botan_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "botan-3" 2>&1`
+	        botan_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "botan-3" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$botan_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$botan_PKG_ERRORS" >&5
 
 
 pkg_failed=no
@@ -24266,14 +24266,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                botan_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "botan-2" 2>&1`
+	        botan_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "botan-2" 2>&1`
         else
-                botan_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "botan-2" 2>&1`
+	        botan_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "botan-2" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$botan_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$botan_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (botan-2) were not met:
+	as_fn_error $? "Package requirements (botan-2) were not met:
 
 $botan_PKG_ERRORS
 
@@ -24286,7 +24286,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -24299,8 +24299,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        botan_CFLAGS=$pkg_cv_botan_CFLAGS
-        botan_LIBS=$pkg_cv_botan_LIBS
+	botan_CFLAGS=$pkg_cv_botan_CFLAGS
+	botan_LIBS=$pkg_cv_botan_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -24360,14 +24360,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                botan_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "botan-2" 2>&1`
+	        botan_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "botan-2" 2>&1`
         else
-                botan_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "botan-2" 2>&1`
+	        botan_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "botan-2" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$botan_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$botan_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (botan-2) were not met:
+	as_fn_error $? "Package requirements (botan-2) were not met:
 
 $botan_PKG_ERRORS
 
@@ -24380,7 +24380,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -24393,15 +24393,15 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        botan_CFLAGS=$pkg_cv_botan_CFLAGS
-        botan_LIBS=$pkg_cv_botan_LIBS
+	botan_CFLAGS=$pkg_cv_botan_CFLAGS
+	botan_LIBS=$pkg_cv_botan_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
 fi
 else
-        botan_CFLAGS=$pkg_cv_botan_CFLAGS
-        botan_LIBS=$pkg_cv_botan_LIBS
+	botan_CFLAGS=$pkg_cv_botan_CFLAGS
+	botan_LIBS=$pkg_cv_botan_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -24583,14 +24583,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                pcsclite_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libpcsclite" 2>&1`
+	        pcsclite_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libpcsclite" 2>&1`
         else
-                pcsclite_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libpcsclite" 2>&1`
+	        pcsclite_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libpcsclite" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$pcsclite_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$pcsclite_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (libpcsclite) were not met:
+	as_fn_error $? "Package requirements (libpcsclite) were not met:
 
 $pcsclite_PKG_ERRORS
 
@@ -24603,7 +24603,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -24616,8 +24616,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        pcsclite_CFLAGS=$pkg_cv_pcsclite_CFLAGS
-        pcsclite_LIBS=$pkg_cv_pcsclite_LIBS
+	pcsclite_CFLAGS=$pkg_cv_pcsclite_CFLAGS
+	pcsclite_LIBS=$pkg_cv_pcsclite_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -24679,14 +24679,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                nm_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "gthread-2.0 libnm" 2>&1`
+	        nm_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "gthread-2.0 libnm" 2>&1`
         else
-                nm_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "gthread-2.0 libnm" 2>&1`
+	        nm_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "gthread-2.0 libnm" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$nm_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$nm_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (gthread-2.0 libnm) were not met:
+	as_fn_error $? "Package requirements (gthread-2.0 libnm) were not met:
 
 $nm_PKG_ERRORS
 
@@ -24699,7 +24699,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -24712,8 +24712,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        nm_CFLAGS=$pkg_cv_nm_CFLAGS
-        nm_LIBS=$pkg_cv_nm_LIBS
+	nm_CFLAGS=$pkg_cv_nm_CFLAGS
+	nm_LIBS=$pkg_cv_nm_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -24837,14 +24837,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                libiptc_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libip4tc" 2>&1`
+	        libiptc_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libip4tc" 2>&1`
         else
-                libiptc_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libip4tc" 2>&1`
+	        libiptc_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libip4tc" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$libiptc_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$libiptc_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (libip4tc) were not met:
+	as_fn_error $? "Package requirements (libip4tc) were not met:
 
 $libiptc_PKG_ERRORS
 
@@ -24857,7 +24857,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -24870,8 +24870,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        libiptc_CFLAGS=$pkg_cv_libiptc_CFLAGS
-        libiptc_LIBS=$pkg_cv_libiptc_LIBS
+	libiptc_CFLAGS=$pkg_cv_libiptc_CFLAGS
+	libiptc_LIBS=$pkg_cv_libiptc_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 
@@ -25016,14 +25016,14 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-                selinux_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libselinux" 2>&1`
+	        selinux_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libselinux" 2>&1`
         else
-                selinux_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libselinux" 2>&1`
+	        selinux_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libselinux" 2>&1`
         fi
-        # Put the nasty error message in config.log where it belongs
-        echo "$selinux_PKG_ERRORS" >&5
+	# Put the nasty error message in config.log where it belongs
+	echo "$selinux_PKG_ERRORS" >&5
 
-        as_fn_error $? "Package requirements (libselinux) were not met:
+	as_fn_error $? "Package requirements (libselinux) were not met:
 
 $selinux_PKG_ERRORS
 
@@ -25036,7 +25036,7 @@ See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 printf "%s\n" "no" >&6; }
-        { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+	{ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 printf "%s\n" "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
@@ -25049,8 +25049,8 @@ See the pkg-config man page for more details.
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-        selinux_CFLAGS=$pkg_cv_selinux_CFLAGS
-        selinux_LIBS=$pkg_cv_selinux_LIBS
+	selinux_CFLAGS=$pkg_cv_selinux_CFLAGS
+	selinux_LIBS=$pkg_cv_selinux_LIBS
         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 printf "%s\n" "yes" >&6; }
 

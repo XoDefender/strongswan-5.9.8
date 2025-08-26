@@ -475,9 +475,7 @@ xml_LIBS = @xml_LIBS@
 AM_CPPFLAGS = \
 	-I$(top_srcdir)/src/libstrongswan
 
-AM_CFLAGS = \
-	$(PLUGIN_CFLAGS)
-
+AM_CFLAGS = $(PLUGIN_CFLAGS)
 @MONOLITHIC_TRUE@noinst_LTLIBRARIES = libstrongswan-pkcs11.la
 @MONOLITHIC_FALSE@plugin_LTLIBRARIES = libstrongswan-pkcs11.la
 libstrongswan_pkcs11_la_SOURCES = \

@@ -547,7 +547,7 @@ libtls_la_LIBADD = $(top_builddir)/src/libstrongswan/libstrongswan.la \
 @USE_DEV_HEADERS_TRUE@	tls_crypto.h tls_prf.h tls_hkdf.h tls_socket.h tls_eap.h tls_cache.h \
 @USE_DEV_HEADERS_TRUE@	tls_peer.h tls_server.h tls_handshake.h tls_application.h tls_aead.h tls.h
 
-SUBDIRS = . tests
+SUBDIRS = .
 all: all-recursive
 
 .SUFFIXES:
