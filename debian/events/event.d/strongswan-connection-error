@@ -1,0 +1,23 @@
+{
+
+"message-type": "charon-nm",
+
+"message-group-values": [
+    "STRONGSWAN"
+],
+
+"filter-values": {
+    "charon-nm.action": "CONNECTION ERROR REPORT"
+},
+
+"message-params": {
+    "message_id": "strongswan_connection_error",
+    "name_en": "Connection error",
+    "name_ru": "Ошибка подключения"
+},
+
+"extend-message-params": {
+    "header": { "key": "charon-nm.header", "enabled": "1" },
+    "body": { "key": "charon-nm.body", "enabled": "1" }
+}
+}

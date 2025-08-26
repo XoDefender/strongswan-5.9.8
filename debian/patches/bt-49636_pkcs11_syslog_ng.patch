@@ -1,0 +1,29 @@
+Description: pkcs11 prepare for fly-notification (bt-49636)
+   * d/exents: added 
+   * d/rules: prepare for fly-notification
+Author: Gennady Vasilev <gvailev@astralinux.ru>
+Last-Update: 2024-09-06
+
+--- strongswan-5.9.8.orig/src/libstrongswan/plugins/pkcs11/pkcs11_private_key.c
++++ strongswan-5.9.8/src/libstrongswan/plugins/pkcs11/pkcs11_private_key.c
+@@ -774,15 +774,15 @@ static bool login(private_pkcs11_private
+ 			break;
+ 		}
+ 		if (rv == CKR_PIN_INCORRECT)
+-			DBG1(DBG_CFG, "strongswan: ошибка токена (%s)", "Неверный пин-код");
++			DBG1(DBG_CFG, "type=STRONGSWAN action='TOKEN ERROR REPORT' header='%s' body='%s'", "strongswan: ошибка токена", "Неверный пин-код");
+ 		if (rv == CKR_PIN_INVALID)
+-			DBG1(DBG_CFG, "strongswan: ошибка токена (%s)", "Пин-код содержит недопустимые символы");
++			DBG1(DBG_CFG, "type=STRONGSWAN action='TOKEN ERROR REPORT' header='%s' body='%s'", "strongswan: ошибка токена", "Пин-код содержит недопустимые символы");
+ 		if (rv == CKR_PIN_LEN_RANGE)
+-			DBG1(DBG_CFG, "strongswan: ошибка токена (%s)", "Неверная длина пин-кода");
++			DBG1(DBG_CFG, "type=STRONGSWAN action='TOKEN ERROR REPORT' header='%s' body='%s'", "strongswan: ошибка токена", "Неверная длина пин-кода");
+ 		if (rv == CKR_PIN_EXPIRED)
+-			DBG1(DBG_CFG, "strongswan: ошибка токена (%s)", "Истек срок действия пин-кода");
++			DBG1(DBG_CFG, "type=STRONGSWAN action='TOKEN ERROR REPORT' header='%s' body='%s'", "strongswan: ошибка токена", "Истек срок действия пин-кода");
+ 		if (rv == CKR_PIN_LOCKED)
+-			DBG1(DBG_CFG, "strongswan: ошибка токена (%s)", "Токен заблокирован");
++			DBG1(DBG_CFG, "type=STRONGSWAN action='TOKEN ERROR REPORT' header='%s' body='%s'", "strongswan: ошибка токена", "Токен заблокирован");
+ 	}
+ 	enumerator->destroy(enumerator);
+ 

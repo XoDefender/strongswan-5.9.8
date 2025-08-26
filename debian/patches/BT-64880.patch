@@ -1,0 +1,25 @@
+Description: Add charon-nm sucess/failure notify (BT-64880)
+Author: Gennady Vasilev <gvailev@astralinux.ru>
+Last-Update: 2025-04-23
+
+--- strongswan-5.9.8.orig/src/charon-nm/nm/nm_service.c
++++ strongswan-5.9.8/src/charon-nm/nm/nm_service.c
+@@ -246,6 +246,9 @@ static void signal_ip_config(NMVpnServic
+ 	{
+ 		nm_vpn_service_plugin_set_ip6_config (plugin, ip6config);
+ 	}
++
++        DBG1(DBG_CFG, "type=STRONGSWAN action='CONNECTION SUCCESS REPORT' header='%s' body='%s'",
++                      "strongswan: подключено", "Соединение установлено");
+ }
+ 
+ /**
+@@ -258,6 +261,8 @@ static void signal_failure(NMVpnServiceP
+ 
+ 	handler->reset(handler);
+ 
++        DBG1(DBG_CFG, "type=STRONGSWAN action='CONNECTION ERROR REPORT' header='%s' body='%s'",
++                      "strongswan: ошибка подключения", "Соединение не установлено");
+ 	nm_vpn_service_plugin_failure(plugin, failure);
+ }
+ 

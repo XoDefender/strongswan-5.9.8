@@ -1,0 +1,68 @@
+Description: Add libnotify notifications about pin errors
+Author: Gennady Vasilev <gvailev@astralinux.ru>
+Last-Update: 2024-05-22
+
+--- strongswan-5.9.8.orig/configure.ac
++++ strongswan-5.9.8/configure.ac
+@@ -1018,6 +1018,12 @@ if test x$unbound = xtrue; then
+ 	AC_CHECK_HEADER([unbound.h],,[AC_MSG_ERROR([UNBOUND header unbound.h not found!])])
+ fi
+ 
++if test x$pkcs11 = xtrue; then
++	PKG_CHECK_MODULES(notify, [libnotify])
++	AC_SUBST(notify_CFLAGS)
++	AC_SUBST(notify_LIBS)
++fi
++
+ if test x$soup = xtrue; then
+ 	PKG_CHECK_MODULES(soup, [libsoup-2.4])
+ 	AC_SUBST(soup_CFLAGS)
+--- strongswan-5.9.8.orig/src/libstrongswan/plugins/pkcs11/Makefile.am
++++ strongswan-5.9.8/src/libstrongswan/plugins/pkcs11/Makefile.am
+@@ -2,7 +2,7 @@ AM_CPPFLAGS = \
+ 	-I$(top_srcdir)/src/libstrongswan
+ 
+ AM_CFLAGS = \
+-	$(PLUGIN_CFLAGS)
++	$(PLUGIN_CFLAGS) @notify_CFLAGS@
+ 
+ if MONOLITHIC
+ noinst_LTLIBRARIES = libstrongswan-pkcs11.la
+@@ -21,4 +21,4 @@ libstrongswan_pkcs11_la_SOURCES = \
+ 	pkcs11_dh.h pkcs11_dh.c \
+ 	pkcs11_manager.h pkcs11_manager.c
+ 
+-libstrongswan_pkcs11_la_LDFLAGS = -module -avoid-version
++libstrongswan_pkcs11_la_LDFLAGS = -module -avoid-version @notify_LIBS@
+--- strongswan-5.9.8.orig/src/libstrongswan/plugins/pkcs11/pkcs11_private_key.c
++++ strongswan-5.9.8/src/libstrongswan/plugins/pkcs11/pkcs11_private_key.c
+@@ -44,6 +44,7 @@
+ 
+ #include <utils/debug.h>
+ #include <asn1/asn1.h>
++#include <libnotify/notify.h>
+ 
+ typedef struct private_pkcs11_private_key_t private_pkcs11_private_key_t;
+ 
+@@ -775,6 +776,21 @@ static bool login(private_pkcs11_private
+ 		}
+ 		DBG1(DBG_CFG, "login to '%s':%d failed: %N",
+ 			 this->lib->get_name(this->lib), slot, ck_rv_names, rv);
++    notify_init("strongswan");
++    NotifyNotification *notif = NULL;
++		if (rv == CKR_PIN_INCORRECT)
++			notif = notify_notification_new("strongswan: ошибка токена", "Неверный пин-код", NULL);
++		if (rv == CKR_PIN_INVALID)
++			notif = notify_notification_new("strongswan: ошибка токена", "Пин-код содержит недопустимые символы", NULL);
++		if (rv == CKR_PIN_LEN_RANGE)
++			notif = notify_notification_new("strongswan: ошибка токена", "Неверная длина пин-кода", NULL);
++		if (rv == CKR_PIN_EXPIRED)
++			notif = notify_notification_new("strongswan: ошибка токена", "Истек срок действия пин-кода", NULL);
++		if (rv == CKR_PIN_LOCKED)
++			notif = notify_notification_new("strongswan: ошибка токена", "Токен заблокирован", NULL);
++    notify_notification_show(notif, NULL);
++    g_object_unref(G_OBJECT(notif));
++    notify_uninit();
+ 	}
+ 	enumerator->destroy(enumerator);
+ 

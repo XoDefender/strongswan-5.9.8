@@ -1,0 +1,99 @@
+--- a/src/charon-nm/nm/nm_service.c	2022-06-29 16:00:45.000000000 +0300
++++ b/src/charon-nm/nm/nm_service.c	2024-11-28 13:03:56.771977807 +0300
+@@ -409,6 +409,9 @@
+ 		}
+ 		if (!id)
+ 		{
++			DBG1(DBG_CFG, "type=STRONGSWAN action='CONNECTION ERROR REPORT' header='%s' body='%s'", 
++				"strongswan: ошибка подключения", "На токене не найден подходящий сертификат");
++				
+ 			g_set_error(err, NM_VPN_PLUGIN_ERROR,
+ 						NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
+ 						"No usable smartcard certificate found.");
+@@ -427,6 +430,9 @@
+ 								  BUILD_FROM_FILE, str, BUILD_END);
+ 		if (!cert)
+ 		{
++			DBG1(DBG_CFG, "type=STRONGSWAN action='CONNECTION ERROR REPORT' header='%s' body='%s'", 
++				"strongswan: ошибка подключения", "Не удалось загрузить сертификат клиента");
++
+ 			g_set_error(err, NM_VPN_PLUGIN_ERROR,
+ 						NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
+ 						"Loading peer certificate failed.");
+@@ -468,6 +474,9 @@
+ 									KEY_ANY, BUILD_FROM_FILE, str, BUILD_END);
+ 			if (!private)
+ 			{
++				DBG1(DBG_CFG, "type=STRONGSWAN action='CONNECTION ERROR REPORT' header='%s' body='%s'", 
++					"strongswan: ошибка подключения", "Не удалось загрузить приватный ключ клиента");
++
+ 				g_set_error(err, NM_VPN_PLUGIN_ERROR,
+ 							NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
+ 							"Loading private key failed.");
+@@ -487,6 +496,9 @@
+ 	}
+ 	else
+ 	{
++		DBG1(DBG_CFG, "type=STRONGSWAN action='CONNECTION ERROR REPORT' header='%s' body='%s'", 
++			"strongswan: ошибка подключения", "Сертификат клиента не найден");
++
+ 		g_set_error(err, NM_VPN_PLUGIN_ERROR, NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
+ 					"Certificate is missing.");
+ 		return FALSE;
+@@ -663,6 +675,9 @@
+ 	ike.remote = (char*)nm_setting_vpn_get_data_item(vpn, "address");
+ 	if (!ike.remote || !*ike.remote)
+ 	{
++		DBG1(DBG_CFG, "type=STRONGSWAN action='CONNECTION ERROR REPORT' header='%s' body='%s'", 
++			"strongswan: ошибка подключения", "Адрес сервера не указан");
++
+ 		g_set_error(err, NM_VPN_PLUGIN_ERROR, NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
+ 					"Gateway address missing.");
+ 		return FALSE;
+@@ -692,6 +707,9 @@
+ 								  BUILD_FROM_FILE, str, BUILD_END);
+ 		if (!cert)
+ 		{
++			DBG1(DBG_CFG, "type=STRONGSWAN action='CONNECTION ERROR REPORT' header='%s' body='%s'", 
++				"strongswan: ошибка подключения", "Не удалось загрузить сертификат сервера");
++
+ 			g_set_error(err, NM_VPN_PLUGIN_ERROR,
+ 						NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
+ 						"Loading gateway certificate failed.");
+
+--- a/src/libcharon/sa/ike_sa.c	2022-09-26 11:32:37.000000000 +0300
++++ b/src/libcharon/sa/ike_sa.c	2024-11-28 13:28:35.907972164 +0300
+@@ -1546,8 +1546,9 @@
+ 			addr = this->ike_cfg->get_other_addr(this->ike_cfg);
+ 			if (!this->retry_initiate_interval)
+ 			{
+-				DBG1(DBG_IKE, "unable to resolve %s, initiate aborted",
+-					 addr);
++				DBG1(DBG_CFG, "type=STRONGSWAN action='CONNECTION ERROR REPORT' header='%s' body='%s'", 
++					"strongswan: ошибка подключения", "Не удалось определить адрес сервера");
++				DBG1(DBG_IKE, "unable to resolve %s, initiate aborted", addr);
+ 				DESTROY_IF(child_cfg);
+ 				charon->bus->alert(charon->bus, ALERT_PEER_ADDR_FAILED);
+ 				return DESTROY_ME;
+@@ -2448,6 +2449,7 @@
+ 		default:
+ 			break;
+ 	}
++
+ 	/* send a proper signal to brief interested bus listeners */
+ 	switch (this->state)
+ 	{
+
+--- a/src/libstrongswan/credentials/credential_manager.c	2022-10-03 17:14:38.000000000 +0300
++++ b/src/libstrongswan/credentials/credential_manager.c	2024-11-28 12:58:12.687979119 +0300
+@@ -595,6 +595,10 @@
+ 		default:
+ 			break;
+ 	}
++
++	DBG1(DBG_CFG, "type=STRONGSWAN action='CONNECTION ERROR REPORT' header='%s' body='%s'", 
++		"strongswan: ошибка подключения", "Сертификат просрочен");
++
+ 	call_hook(this, CRED_HOOK_EXPIRED, cert);
+ 	return FALSE;
+ }
