@@ -339,19 +339,31 @@ METHOD(listener_t, child_updown, bool,
  * Find a certificate for which we have a private key on a smartcard
  */
 static identification_t *find_smartcard_key(NMStrongswanPluginPrivate *priv,
-											char *pin)
+											char *pin, char* crt_id)
 {
 	enumerator_t *enumerator, *sans;
 	identification_t *id = NULL;
+	certificate_t *cert_by_id = NULL;
 	certificate_t *cert;
 	x509_t *x509;
 	private_key_t *key;
 	chunk_t keyid;
 
+	if(crt_id)
+	{	
+		chunk_t chunk = chunk_from_hex(chunk_create(crt_id, strlen(crt_id)), NULL);
+		cert_by_id = lib->creds->create(lib->creds, CRED_CERTIFICATE, X509_CA, 
+										BUILD_PKCS11_KEYID, chunk, BUILD_END);
+	}
+
 	enumerator = lib->credmgr->create_cert_enumerator(lib->credmgr,
 											CERT_X509, KEY_ANY, NULL, FALSE);
 	while (enumerator->enumerate(enumerator, &cert))
 	{
+		if(cert_by_id && !cert->equals(cert, cert_by_id)) {
+			continue;
+		}
+
 		x509 = (x509_t*)cert;
 
 		/* there might be a lot of certificates, filter them by usage */
@@ -383,6 +395,10 @@ static identification_t *find_smartcard_key(NMStrongswanPluginPrivate *priv,
 				}
 			}
 		}
+		if(cert_by_id && crt_id) {
+			DBG1(DBG_CFG, "certificate found by provided id '%s' can not be used", crt_id);
+			break;
+		}
 	}
 	enumerator->destroy(enumerator);
 	return id;
@@ -410,7 +426,9 @@ static bool add_auth_cfg_cert(NMStrongswanPluginPrivate *priv,
 		pin = (char*)nm_setting_vpn_get_secret(vpn, "password");
 		if (pin)
 		{
-			id = find_smartcard_key(priv, pin);
+			char* cert_id;
+			cert_id = (char*)nm_setting_vpn_get_data_item(vpn, "usercert-id");
+			id = find_smartcard_key(priv, pin, cert_id);
 		}
 		if (!id)
 		{
