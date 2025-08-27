@@ -427,9 +427,9 @@ static bool add_auth_cfg_cert(NMStrongswanPluginPrivate *priv,
 		if (pin)
 		{
 			char* cert_id_secret, *cert_id_data_item;
-+			cert_id_secret = (char*)nm_setting_vpn_get_secret(vpn, "usercert-id");
-+			cert_id_data_item = (char*)nm_setting_vpn_get_data_item(vpn, "usercert-id");
-+			id = find_smartcard_key(priv, pin, cert_id_secret ? cert_id_secret : cert_id_data_item);
+			cert_id_secret = (char*)nm_setting_vpn_get_secret(vpn, "usercert-id");
+			cert_id_data_item = (char*)nm_setting_vpn_get_data_item(vpn, "usercert-id");
+			id = find_smartcard_key(priv, pin, cert_id_secret ? cert_id_secret : cert_id_data_item);
 		}
 		if (!id)
 		{
